@@ -1,0 +1,290 @@
+:root {
+  --bg: #0d0b09;
+  --bg-2: #16120e;
+  --panel: #1d1812;
+  --line: #2e261c;
+  --gold: #d4a24a;
+  --gold-2: #f0c877;
+  --red: #b3392f;
+  --red-2: #e05b4a;
+  --text: #f2e9dc;
+  --muted: #a89a86;
+  --muted-2: #7d7263;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hero {
+  position: relative;
+  padding: 48px 24px 40px;
+  background:
+    radial-gradient(1200px 500px at 20% -10%, rgba(212, 162, 74, 0.18), transparent 60%),
+    radial-gradient(900px 500px at 90% 10%, rgba(179, 57, 47, 0.16), transparent 60%),
+    linear-gradient(180deg, #14100b 0%, var(--bg) 100%);
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+  mask-image: linear-gradient(180deg, #000 0%, transparent 90%);
+}
+
+.brand {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: linear-gradient(140deg, var(--gold), #8a5f1e);
+  color: #1a1206;
+  font-family: "Cinzel", serif;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.brand-name {
+  font-family: "Cinzel", serif;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+.brand-tag {
+  color: var(--muted);
+  font-size: 13px;
+  border-left: 1px solid var(--line);
+  padding-left: 12px;
+}
+
+.hero-inner { position: relative; z-index: 1; max-width: 1080px; }
+
+.kicker {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+h1 {
+  font-family: "Cinzel", serif;
+  font-weight: 800;
+  font-size: clamp(30px, 5vw, 56px);
+  line-height: 1.05;
+  margin: 0 0 14px;
+  background: linear-gradient(180deg, #fff4df, var(--gold-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  font-size: clamp(16px, 2vw, 20px);
+  color: var(--muted);
+  max-width: 760px;
+  margin: 0 0 20px;
+}
+
+.meta { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.03);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.chip strong { color: var(--text); font-weight: 600; }
+
+.chip.status { border-color: rgba(212,162,74,0.5); color: var(--gold-2); }
+
+main { max-width: 1080px; margin: 0 auto; padding: 28px 24px 64px; }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+  margin-bottom: 36px;
+}
+
+.stat {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px 18px;
+}
+
+.stat .num {
+  font-family: "Cinzel", serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--gold-2);
+}
+
+.stat .label { color: var(--muted-2); font-size: 13px; }
+
+.section { margin-bottom: 44px; }
+
+h2 {
+  font-family: "Cinzel", serif;
+  font-size: 24px;
+  margin: 0 0 6px;
+}
+
+.section-sub { color: var(--muted); margin: 0 0 20px; }
+
+.scenes { display: flex; flex-direction: column; gap: 14px; }
+
+.scene {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px 20px;
+  display: grid;
+  grid-template-columns: 84px 1fr;
+  gap: 16px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.scene:hover { border-color: rgba(212,162,74,0.45); transform: translateY(-1px); }
+
+.scene-time {
+  font-family: "Cinzel", serif;
+  font-weight: 800;
+  color: var(--gold);
+  font-size: 18px;
+  padding-top: 3px;
+}
+
+.scene-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.scene-order {
+  color: var(--muted-2);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.scene-chapter {
+  color: var(--red-2);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+.scene-title {
+  font-family: "Cinzel", serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.narration {
+  color: var(--text);
+  background: rgba(0,0,0,0.22);
+  border-left: 3px solid var(--gold);
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin: 10px 0;
+  white-space: pre-wrap;
+}
+
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+
+.tag {
+  font-size: 12px;
+  color: var(--muted);
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 5px 9px;
+}
+
+.tag b { color: var(--gold-2); font-weight: 600; }
+
+.sources { display: grid; gap: 10px; }
+
+.source {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.source .kind {
+  flex: none;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gold);
+  border: 1px solid rgba(212,162,74,0.4);
+  border-radius: 999px;
+  padding: 3px 9px;
+  margin-top: 3px;
+}
+
+.source a { color: var(--gold-2); }
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 28px 24px 40px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+footer .dim { color: var(--muted-2); font-size: 12px; }
+
+.loading, .error {
+  padding: 24px;
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  color: var(--muted);
+}
+
+.error { color: var(--red-2); border-color: rgba(224,91,74,0.5); }
+
+@media (max-width: 640px) {
+  .scene { grid-template-columns: 1fr; gap: 6px; }
+  .scene-time { padding-top: 0; }
+}

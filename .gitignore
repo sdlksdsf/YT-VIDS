@@ -1,0 +1,6 @@
+# Build artifacts & large media (keep repo lean; source assets are committed)
+animatic*.mp4
+build/
+build2/
+*.tmp
+__pycache__/
