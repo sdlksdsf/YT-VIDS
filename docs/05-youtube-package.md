@@ -89,10 +89,19 @@ Record a separate fast-paced read of the cold open + the "70 ships over the hill
 | Asset | Status |
 |---|---|
 | Script (v1) | ✅ approved |
-| Narration audio | 10/12 chunks recorded (voice-00) |
+| Narration audio | ✅ 12/12 chunks recorded (voice-00), 18:18 total |
 | Thumbnail | ✅ selected |
 | Character art | ✅ Mehmed, Constantine, Great Bombard |
-| Background plate | 🔄 retrying |
-| Animation | ⏳ next phase (animatic → full 2D) |
-| Music/SFX | ⏳ Kevin MacLeod + Freesound (licensed) |
-| Channel name | ⏳ waiting on you |
+| Background plates | ✅ 9 plates (walls, horn, camp, underground, Hagia Sophia, assault, eclipse, echo, two thrones) |
+| Animatic | ✅ `animatic_full.mp4` — 12 scenes, 18:18, 1280×720, burned-in captions, synth score bed |
+| Music/SFX | ✅ placeholder score bed mixed under narration (swap for licensed tracks at final mix) |
+| Production dashboard | ✅ live at https://ytvids-static2.vercel.app (Supabase-backed) |
+| Channel name | ⏳ you said you'll pick it later — placeholder "Echoes of Empires" in use |
+
+## 9. Delivery log
+
+- **Animatic:** `animatic_full.mp4` (18:18, 233 MB, h264 1280×720 + AAC). 12 narration clips over 12 generated plates, Ken-Burns motion, burned-in captions, synthesized drone + war-drum bed under the voice.
+- **Dashboard:** deployed on Vercel (project `ytvids-static2`, framework vite, static output) at **https://ytvids-static2.vercel.app**. Pulls episode, scene and source rows from Supabase REST.
+- **Repo:** `arena/1b17490e-yt-vids` — script, style bible, reference deep-dive, YouTube package, narration chunks + mp3s, art plates, dashboard source.
+- **Google Drive:** folder "YT-VIDS" holds the three docs (deep dive, style bible, script).
+- **Next:** full 2D animation pass (character rigging / scene motion), licensed music swap, final mix, then upload.
