@@ -94,6 +94,8 @@ Record a separate fast-paced read of the cold open + the "70 ships over the hill
 | Character art | ✅ Mehmed, Constantine, Great Bombard |
 | Background plates | ✅ 9 plates (walls, horn, camp, underground, Hagia Sophia, assault, eclipse, echo, two thrones) |
 | Animatic | ✅ `animatic_full.mp4` — 12 scenes, 18:18, 1280×720, burned-in captions, synth score bed |
+| **Final video** | ✅ **`video_master.mp4`** — 18:25.98, 227 MB, chapter/date/end cards, lower-thirds, badges, brand bug, vignette, Ken-Burns, boom + drum-roll, score bed under voice |
+| Drive copy | ✅ `video_drive.mp4` — 75 MB, crf 28, uploaded to Drive (public link) |
 | Music/SFX | ✅ placeholder score bed mixed under narration (swap for licensed tracks at final mix) |
 | Production dashboard | ✅ live at https://ytvids-static2.vercel.app (Supabase-backed) |
 | Channel name | ⏳ you said you'll pick it later — placeholder "Echoes of Empires" in use |
@@ -103,5 +105,9 @@ Record a separate fast-paced read of the cold open + the "70 ships over the hill
 - **Animatic:** `animatic_full.mp4` (18:18, 233 MB, h264 1280×720 + AAC). 12 narration clips over 12 generated plates, Ken-Burns motion, burned-in captions, synthesized drone + war-drum bed under the voice.
 - **Dashboard:** deployed on Vercel (project `ytvids-static2`, framework vite, static output) at **https://ytvids-static2.vercel.app**. Pulls episode, scene and source rows from Supabase REST.
 - **Repo:** `arena/1b17490e-yt-vids` — script, style bible, reference deep-dive, YouTube package, narration chunks + mp3s, art plates, dashboard source.
-- **Google Drive:** folder "YT-VIDS" holds the three docs (deep dive, style bible, script).
-- **Next:** full 2D animation pass (character rigging / scene motion), licensed music swap, final mix, then upload.
+- **Google Drive:** folder "YT-VIDS" holds the three docs (deep dive, style bible, script) plus the finished video.
+- **Final video (uploaded):** "The Last 53 Days of Rome - Fall of Constantinople 1453 (Full Documentary)" — file ID `1Yl2Yh8hBfAbOtEDKjis_7wJvYobGx_0X`, 78,677,547 bytes (75 MB), 1280×720 24fps, 18:25.98, h264 569 kb/s + aac 141 kb/s, shared **anyone with the link can view** (searchable).
+  - https://drive.google.com/file/d/1Yl2Yh8hBfAbOtEDKjis_7wJvYobGx_0X/view?usp=drivesdk
+  - Source master: `video_master.mp4` (227 MB, h264 1724 kb/s) built by `tools/build_video.py` — 21 segments (date card, 5 chapter cards, 12 plates, end card), lower-thirds, badges, brand bug, vignette, Ken-Burns, boom/drum-roll, score bed mixed with narration.
+  - Drive copy: `video_drive.mp4` (crf 28, +faststart) to stay under the 100 MB upload cap.
+- **Next:** swap the placeholder score bed for licensed tracks, optional character rigging pass, then YouTube upload (titles A/B, thumbnail, description above, tags, captions, end screens).
